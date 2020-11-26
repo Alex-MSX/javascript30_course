@@ -1,0 +1,41 @@
+/* Sirve para colocar variables en css */
+:root {
+  --color: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+body {
+  background: #193549;
+  font-family: sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.controls {
+  margin: 2rem;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+input {
+  margin-right: 2rem;
+}
+
+img {
+  background-color: var(--color);
+  padding: var(--spacing);
+  filter: blur(var(--blur))
+}
+
+.highlight {
+  color: var(--color);
+}
