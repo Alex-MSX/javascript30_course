@@ -1,17 +1,27 @@
 const checks = document.querySelectorAll('.item input')
 
+let lastChecked
 
-function indexChecked() {
-  const checkboxes = [...document.querySelectorAll('.item input')]
-  return checkboxes.findIndex(checkbox => checkbox.checked == true)
+function indexChecked(e) {
+
+  let inBetween = false
+
+  if (e.shiftKey) {
+    checks.forEach(check => {
+
+      if (check === this || check === lastChecked) {
+        inBetween = !inBetween
+      }
+
+      if (inBetween) {
+        check.checked = true
+      }
+    });
+  }
+
+  lastChecked = this
 }
 
 checks.forEach(check => {
-  check.addEventListener('change', getIndex)
+  check.addEventListener('click', indexChecked)
 });
-
-
-function getIndex(e) {
-  console.log(this)
-  console.log(e)
-}
