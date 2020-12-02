@@ -11,7 +11,7 @@ const skipButtons = player.querySelectorAll('[data-skip]')
 const ranges = player.querySelectorAll('.player-slider')
 const fullscreen = player.querySelector('.fa-arrows-alt')
 
-console.dir(fullscreen)
+console.dir(video)
 
 // Build our function
 function togglePlay() {
