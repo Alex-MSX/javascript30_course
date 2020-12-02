@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Video player</title>
+    <link rel="stylesheet" href="css/master.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <div class="player">
+      <video class="player-video viewer" src="C:\Users\Carlos Ortiz\Desktop\video\bigbuckbunny.mp4"></video>
+
+      <div class="player-controls">
+        <div class="progress">
+          <div class="progress-filled"></div>
+        </div>
+
+        <button type="button" class="player-button toggle" title="Toggle Play"><i class="fa fa-play"></i></button>
+        <input type="range" class="player-slider" min="0" max="1" step="0.05" name="volume" value="1">
+        <input type="range" class="player-slider" min="0.5" max="2" step="0.1" name="playbackRate" value="1">
+        <button type="button" class="player-button" data-skip="-10"><i class="fa fa-fast-backward">10</i></button>
+        <button type="button" class="player-button" data-skip="25">25<i class="fa fa-fast-forward"></i></button>
+        <button type="button" class="player-button"><i class="fa fa-arrows-alt"></i></button>
+      </div>
+    </div>
+
+    <script src="js/master.js" charset="utf-8"></script>
+  </body>
+</html>
